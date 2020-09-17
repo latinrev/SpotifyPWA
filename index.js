@@ -16,6 +16,6 @@ app.get("/success", async (req, res) => {
 	const { access_token, refresh_token } = tokenData.data;
 	const userInfo = await sw.Get(access_token, "me");
 	const { display_name, id } = userInfo.data;
-	fs.writeFile(`${display_name}-${id}.json`, JSON.stringify({ access_token, refresh_token }), () => {});
+	fs.writeFile(`${display_name}-${id}.spt.json`, JSON.stringify({ access_token, refresh_token }), () => {});
 	res.redirect("/");
 });

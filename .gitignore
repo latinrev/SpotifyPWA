@@ -61,7 +61,7 @@ web_modules/
 
 # Optional REPL history
 .node_repl_history
-
+*.spt.json
 # Output of 'npm pack'
 *.tgz
 
